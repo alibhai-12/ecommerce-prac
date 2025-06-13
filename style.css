@@ -1,0 +1,20 @@
+.con{
+  position: relative;
+  margin-top: 23px;
+}
+.img{
+transition: transform 0.3s ease;
+}
+.img:hover {
+  transform: scale(1.1);
+    }
+    .button{
+      cursor: pointer;
+      transition: background-color 1s ease;
+      background-color: aqua;
+    }
+    .button:hover{
+      background-color: blue;
+    }
+
+
