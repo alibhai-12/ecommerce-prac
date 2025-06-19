@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>MADAM'S BOUTIQUE</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -17,8 +17,16 @@
             crossorigin="anonymous">
             <link rel="stylesheet" href="style.css">
     </head>
+    <style>
+header {
+      background-color: aliceblue;
+      color: black;
+      padding: 30px 0;
+      text-align: center;
+    }
+  </style>
+    <body style="background-color: aliceblue;">
 
-    <body>
        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm nav">
     <div class="container">
       <!-- Logo -->
@@ -38,36 +46,54 @@
           
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link" href="#">signin</a>
+             <a class="nav-link" href="signin.html">signin</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link" href="#">signup</a>
+             <a class="nav-link" href="signup.html">signup</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="accessories.html" style="color: blueviolet;">accessories</a>
+         </li>
         </ul>
       </div>
     </div>
   </nav>
-  
-<!-- Hero Section -->
-  <div class="container-fluid p-5 text-center bg-light">
-    <h1 class="display-4 cv">Welcome to BOUTIQUE</h1>
-    <p class="lead">No returns and exchanges.</p>
+  <header>
+    <h1>WELCOME TO MADAM'S BOUTIQUE</h1>
+    <p>No Return And Exchanges</p>
+  </header>
+  <div class="d-flex align-items-center gap-2">
+    <label for="categoryFilter" class="form-label mb-0">:</label>
+    <select id="categoryFilter" class="form-select w-auto" onchange="filterByCategory()">
+      <option value="all">All</option>
+      <option value="eastern cloth">Eastern Cloth</option>
+      <option value="festive">Festive</option>
+      <option value="embroidery">Embroidery</option>
+      <option value="printed">Printed</option>
+      <option value="stitch">Stitch</option>
+    </select>
   </div>
 
+<style>
+  .product-card{
+    display: block;
+  }
+</style>
+    
+<!-- MERA Sections -->
   <!-- Products Section -->
   <div class="container my-5">
-    <div class="row g-4 cv">
+    <div class="row g-4" id="Product-list">
 
       <!-- Product 1 -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
+      <div class="col-md-4 product-card" data-category="eastern cloth">
+  <div class="card">
           <img src="pic/yIZMOUwj-400-400.webp" class="card-img-top product-img img" alt="suit">
           <div class="card-body">
             <h5 class="card-title">Gotta patti suit with bhandhi dubatta</h5> 
@@ -79,8 +105,8 @@
       </div>
 
       <!-- Product 2 -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
+      <div class="col-md-4 product-card" data-category="eastern cloth">
+  <div class="card">
           <img src="pic/zAQXYHwW-400-400.webp" class="card-img-top product-img img" alt="Wireless Earbuds">
           <div class="card-body">
             <h5 class="card-title">Pakistan style organza suit</h5>
@@ -91,52 +117,220 @@
       </div>
 
       <!-- Product 3 -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
+      <div class="col-md-4 product-card" data-category="eastern cloth">
+  <div class="card">
           <img src="pic/JIyDZgOD-400-400.webp" class="card-img-top product-img img" alt="Backpack">
           <div class="card-body">
             <h5 class="card-title">Crushed shimmer</h5>
             <p class="card-text">Best selling product.</p>
-            <button class="btn btn-primary button">Buy Now - PKR 5000</button>
+            <button class="btn btn-primary button" onclick="Details3('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5000</button>
           </div>
         </div>
       </div>
       <!-- Product 4  -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
-          <img src="pic/hhh.jfif" class="card-img-top product-img img" alt="Backpack">
+     <div class="col-md-4 product-card" data-category="embroidery">
+  <div class="card">
+          <img src="pic/hhh.jfif" class="card-img-top product-img img">
           <div class="card-body">
-            <h5 class="card-title">Black Organza 3 pcs suit with zari embroidery on shirt and 4 cv sided border on dupatta</h5>
+            <h5 class="card-title">Black Organza 3 pcs suit with zari embroidery on shirt and 4  id="Product-list"sided border on dupatta</h5>
             <p class="card-text">Most used product.</p>
-            <button class="btn btn-primary button" >Buy Now - PKR 5500</button>
+            <button class="btn btn-primary button" onclick="Details4('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')" >Buy Now - PKR 5500</button>
           </div>
         </div>
       </div>
       <!-- Product 5 -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
-          <img src="pic/fff.jfif" class="card-img-top product-img img" alt="Backpack">
+      <div class="col-md-4 product-card" data-category="embroidery">
+  <div class="card">
+          <img src="pic/fff.jfif" class="card-img-top product-img img">
           <div class="card-body">
-            <h5 class="card-title">White organza 3 pcs suit with zari embroidery on shirt and 4 cv sided border on dupatta</h5>
+            <h5 class="card-title">White organza 3 pcs suit with zari embroidery on shirt and 4  id="Product-list"sided border on dupatta</h5>
             <p class="card-text">popular.</p>
-            <button class="btn btn-primary button">Buy Now - PKR 5500</button>
+            <button class="btn btn-primary button" onclick="Details5('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5500</button>
           </div>
         </div>
       </div>
       <!-- Product 6 -->
-      <div class="col-md-4 cv">
-        <div class="card product-card">
-          <img src="pic/ppp.jfif" class="card-img-top product-img img" alt="Backpack">
+      <div class="col-md-4 product-card" data-category="embroidery">
+  <div class="card">
+          <img src="pic/ppp.jfif" class="card-img-top product-img img">
           <div class="card-body">
             <h5 class="card-title">Mint green cotton embroidered 3 pcs suit with chiffon dupatta</h5>
             <p class="card-text"> Kawaii product</p>
-            <button class="btn btn-primary button">Buy Now - PKR 4500</button>
+            <button class="btn btn-primary button"  onclick="Details6('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4500</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="col-md-4 product-card" data-category="festive">
+  <div class="card">
+          <img src="pic/r.webp" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Aizel skirt and top</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details10('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 10000</button>
+          </div>
+        </div>
+      </div>
+      <!--Product 8-->
+      <div class="col-md-4 product-card" data-category="stitch">
+  <div class="card">
+          <img src="pic/cute.jpg" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Fawn colored 2 pcs dress with heavily embroidered front on tissue silk</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details8('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 11200</button>
+          </div>
+        </div>
+      </div>
+      <!--Product 9-->
+      <div class="col-md-4 product-card" data-category="festive">
+  <div class="card">
+          <img src="pic/fes.jpg" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Dark green embroidered georgette festive pakistani sharara </h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details9('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 15000</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="col-md-4 product-card" data-category="embroidery">
+  <div class="card">
+          <img src="pic/10" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Beautiful heavily embroidered pakistani pink dress </h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details10('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 8000</button>
+          </div>
+        </div>
+      </div>
+      <!--Product 11-->
+      <div class="col-md-4 product-card" data-category="festive">
+  <div class="card">
+          <img src="pic/11" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Festive chikankari</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details11('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 13000</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 12 -->
+      <div class="col-md-4 product-card" data-category="printed">
+  <div class="card">
+          <img src="pic/12" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Printd lawn dress</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details12('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 9600</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 13 -->
+      <div class="col-md-4 product-card" data-category="stitch">
+  <div class="card">
+          <img src="pic/13" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Cross stitch winter kaddar</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details13('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 17000</button>
+          </div>
+        </div>
+      </div>
+      <!--Product 14-->
+      <div class="col-md-4 product-card" data-category="printed">
+  <div class="card">
+          <img src="pic/14.jpg" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Charizma C-prined shwal suit</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details14('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 17500</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 15 -->
+      <div class="col-md-4 product-card" data-category="stitch">
+  <div class="card">
+          <img src="pic/15" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Luxury pret embroidered green cross stitch dress</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details15('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 9600</button>
+          </div>
+        </div>
+      </div>
+       <!--Product 16-->
+      <div class="col-md-4 product-card" data-category="festive">
+  <div class="card">
+          <img src="pic/16" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Gown and dupatta style</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details16('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 13000</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 17 -->
+      <div class="col-md-4 product-card" data-category="printed">
+  <div class="card">
+          <img src="pic/17" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">3pcs untitch printed lawn suit</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details17('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5000</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 18 -->
+      <div class="col-md-4 product-card" data-category="stitch">
+  <div class="card">
+          <img src="pic/18" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Dark blue cross stitch wear dress</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details18('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 11600</button>
+          </div>
+        </div>
+      </div>
+       <!--Product 19-->
+      <div class="col-md-4 product-card" data-category="eastern cloth">
+  <div class="card">
+          <img src="pic/19" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Brown lawn suit</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details19('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 14300</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 20 -->
+      <div class="col-md-4 product-card" data-category="printed">
+  <div class="card">
+          <img src="pic/20" class="card-img-top product-img img">
+          <div class="card-body">
+            <h5 class="card-title">Green cotton pakistani style suit</h5>
+            <p class="card-text"></p>
+            <button class="btn btn-primary button"  onclick="Details20('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 10000</button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <script>
+ function filterByCategory() {
+  const selectedCategory = document.getElementById("categoryFilter").value;
+  const cards = document.querySelectorAll(".product-card");
+
+  cards.forEach(card => {
+    if (selectedCategory === "all" || card.dataset.category === selectedCategory) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+<script>
      function Details1(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
             {
                 var obj = {
@@ -170,8 +364,313 @@
                 window.location.href="details2.html"
             }
   </script>
-  
-  
+  <script>
+     function Details3(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details3.html"
+            }
+  </script>
+  <script>
+     function Details4(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details4.html"
+            }
+  </script>
+   <script>
+     function Details5(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details5.html"
+            }
+  </script>
+  <script>
+     function Details6(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details6.html"
+            }
+  </script>
+  <script>
+     function Details7(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details7.html"
+            }
+  </script>
+  <script>
+     function Details8(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details8.html"
+            }
+  </script>
+  <script>
+     function Details9(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details9.html"
+            }
+  </script>
+  <script>
+     function Details10(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details10.html"
+            }
+  </script>
+  <script>
+     function Details11(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details11.html"
+            }
+  </script>
+  <script>
+     function Details12(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details12.html"
+            }
+  </script>
+  <script>
+     function Details13(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details13.html"
+            }
+  </script>
+  <script>
+     function Details14(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details14.html"
+            }
+  </script>
+  <script>
+     function Details15(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details15.html"
+            }
+  </script>
+  <script>
+     function Details16(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details16.html"
+            }
+  </script>
+  <script>
+     function Details17(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details17.html"
+            }
+  </script>
+  </script>
+  <script>
+     function details18(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details18.html"
+            }
+  </script>
+  <script>
+     function Details19(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details19.html"
+            }
+  </script>
+  <script>
+     function Details20(prodname,prodprice,proddesc,prodimg,spec1,spec2,spec3)
+            {
+                var obj = {
+                    "ProductName":prodname,
+                    "ProductPrice":prodprice,
+                    "ProductDesc":proddesc,
+                    "ProductImage":prodimg,
+                    "Specifications":[spec1,spec2,spec3]
+                }
+                console.log(obj)
+
+                localStorage.setItem('Details',JSON.stringify(obj))
+
+                window.location.href="details20.html"
+            }
+  </script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

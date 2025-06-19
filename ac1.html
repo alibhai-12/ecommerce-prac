@@ -1,8 +1,6 @@
-<!doctype html>
 <html lang="en">
     <head>
-        <title>Details Page</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Title</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -58,15 +56,14 @@
       </div>
     </div>
   </nav>
-  
-            <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center">
   <div class="card" style="display: flex; gap: 20px; padding: 20px;width: 23rem;">
-    <img src="pic/zAQXYHwW-400-400.webp" class="img-fluid" width="300px" alt="Product Image">
+    <img src="ac/th (1).jfif" class="img-fluid" width="300px" alt="Product Image">
     <div>
       <p style="font-size: 18px;">
-        This is a premium quality Pakistan style organza suit. Perfect for festive occasions!
+        Colorful luggage hand bag
       </p>
-      <b style="font-size: 20px;">6500 PKR</b><br>
+      <b style="font-size: 20px;">2000 PKR</b><br>
       <input id="quantity" type="number" min="1" value="1" style="width: 60px; padding: 4px;">
       <br>
       <button onclick="addtocart()" class="btn btn-primary">Add to Cart</button>
@@ -75,7 +72,7 @@
 </div>
 <script>
   function addtocart() {
-    var price = 6500;
+    var price = 2000;
     var quantity = parseInt(document.getElementById("quantity").value);
 
     if (isNaN(quantity) || quantity <= 0) {
@@ -84,11 +81,11 @@
     }
 
     var item = {
-      name: "Pakistani style organza suit",
+      name: "Colorful luggage hand bag",
       price: price,
       quantity: quantity,
       total: price * quantity,
-      image: "pic/zAQXYHwW-400-400.webp"
+      image: "ac/th (1).jfif"
     };
 
     var cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -98,29 +95,3 @@
     window.location.href = "addtocart.html";
   }
 </script>
-        
-        
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script>
-            var details = JSON.parse(localStorage.getItem('Details'))
-            console.log(details)
-            $('.productname').text(details.ProductName)
-            $('#productprice').text(details.ProductPrice)
-            $('#productdesc').text(details.ProductDesc)
-            $('#prodimg').attr('src',details.ProductImage)
-
-        </script>
-    </body>
-</html>

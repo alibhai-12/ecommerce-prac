@@ -37,38 +37,70 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link active" href="home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link" href="#">signin</a>
+             <a class="nav-link" href="signin.html">signin</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link" href="#">signup</a>
+             <a class="nav-link" href="signup.html">signup</a>
           </li>
-
+          <li class="nav-item">
+             <a class="nav-link" href="addtocart.html">Add to cart</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
         
-        <div class="container">
-            <div class="col-lg-12 col-md-12 col-sm-8">
-              <div class="card" style="width: 20rem; padding-top: 20px;">
-                  <img src="pic/yIZMOUwj-400-400.webp" class="img-fluid" width="400px">  
-                <h2 class="cloth1">Gotta patti suit with bhandhi dubatta</h2> <br>
-                <b><p>7000 PKR</p></b>
-                <br>
-                <br>
-                <button onclick="addtocart()" class="btn btn-primary">Add to Cart</button>
-           </div>
-            </div>
-        </div>
+            <div class="d-flex justify-content-center">
+  <div class="card" style="display: flex; gap: 20px; padding: 20px;width: 23rem;">
+    <img src="pic/yIZMOUwj-400-400.webp" class="img-fluid" width="300px" alt="Product Image">
+    <div>
+      <p style="font-size: 18px;">
+        This is a premium quality gotta patti suit with hand-embroidered details. Perfect for festive occasions!
+      </p>
+      <b style="font-size: 20px;">7000 PKR</b><br>
+      <input id="quantity" type="number" min="1" value="1" style="width: 60px; padding: 4px;">
+      <br>
+      <button onclick="addtocart()" class="btn btn-primary">Add to Cart</button>
+    </div>
+  </div>
+</div>
+<script>
+  function addtocart() {
+    var price = 7000;
+    var quantity = parseInt(document.getElementById("quantity").value);
+
+    if (isNaN(quantity) || quantity <= 0) {
+      alert("Please enter a valid quantity.");
+      return;
+    }
+
+    var item = {
+      name: "Gotta patti suit with bhandhi dubatta",
+      price: price,
+      quantity: quantity,
+      total: price * quantity,
+      image: "pic/yIZMOUwj-400-400.webp"
+    };
+
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "addtocart.html";
+  }
+</script>
+
+
+        
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -82,14 +114,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script>
-            var details = JSON.parse(localStorage.getItem('Details'))
-            console.log(details)
-            $('.productname').text(details.ProductName)
-            $('#productprice').text(details.ProductPrice)
-            $('#productdesc').text(details.ProductDesc)
-            $('#prodimg').attr('src',details.ProductImage)
-
-        </script>
+       
     </body>
 </html>
