@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <style>
+    * {
+      box-sizing: border-box;
+      font-family: Tahoma, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(aliceblue, white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px darkgray;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .container h2 {
+      margin-bottom: 20px;
+      color: gray;
+    }
+    .container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid wheat;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .container button {
+      width: 100%;
+      padding: 12px;
+      background-color: lightblue;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .container button:hover {
+      background-color: blue;
+    }
+    .switch-link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: gray;
+    }
+    .switch-link a {
+      color: lightblue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .switch-link a:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome Back!</h2>
+    <form id="signinForm">
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+    </form>
+    <div class="switch-link">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signinForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const savedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!savedUser || savedUser.email !== email || savedUser.password !== password) {
+        alert("Invalid email or password.");
+        return;
+      }
+
+      alert("Signed in successfully!");
+      window.location.href = "checklist.html"; // Go back to place order
+    });
+  </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+  
