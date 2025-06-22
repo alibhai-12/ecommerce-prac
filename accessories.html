@@ -16,6 +16,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"/>
             <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
 
     <body>
@@ -57,7 +58,7 @@
       </div>
     </div>
   </nav>
-  <div class="d-flex align-items-center gap-2">
+  <div class="d-flex align-items-center gap-2" style="justify-content: center;">
     <label for="categoryFilter" class="form-label mb-0">:</label>
     <select id="categoryFilter" class="form-select w-auto" onchange="filterByCategory()">
       <option value="all">All</option>
@@ -68,6 +69,16 @@
       <option value="rings">Rings</option>
     </select>
   </div>
+  <style>
+    .img{
+      height: 250px;
+      object-fit: cover;
+    }
+    .fas{
+  margin-left: 5px;
+  color: orange;
+}
+  </style>
   <!-- MERA Sections -->
   <!-- accessories Section -->
   <div class="container my-5">
@@ -80,8 +91,16 @@
           <div class="card-body">
             <h5 class="card-title">Colorful luggage hand bag</h5> 
             <p class="card-text"></p>
-            
-            <button class="btn btn-primary button" onclick="ac1('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 2000</button>
+             <div class="product-rating">
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac1('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 2000</button>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +113,16 @@
           <div class="card-body">
             <h5 class="card-title">White-silver plate watch</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac2('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 1500</button>
+             <div class="product-rating">
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac2('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 1500</button>
+            </div>
           </div>
         </div>
       </div>
@@ -106,7 +134,16 @@
           <div class="card-body">
             <h5 class="card-title">Real space time watch</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac3('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 2500</button>
+            <div class="product-rating">
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac3('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 2500</button>
+            </div>
           </div>
         </div>
       </div>
@@ -117,7 +154,16 @@
           <div class="card-body">
             <h5 class="card-title">Gold plated ring</h5> 
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac4('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5000</button>
+             <div class="product-rating">
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac4('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5000</button>
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +176,16 @@
           <div class="card-body">
             <h5 class="card-title">Gold pendant nexklace</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac5('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4200</button>
+            <div class="product-rating">
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac5('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4200</button>
+            </div>
           </div>
         </div>
       </div>
@@ -142,7 +197,16 @@
           <div class="card-body">
             <h5 class="card-title">Black leather handbag</h5>
             <p class="card-text"></p>
+            <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+           <div class="card-footer">
             <button class="btn btn-primary button" onclick="ac6('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 2100</button>
+           </div>
           </div>
         </div>
       </div>
@@ -153,8 +217,16 @@
           <div class="card-body">
             <h5 class="card-title">Gold necklace</h5> 
             <p class="card-text"></p>
-            
-            <button class="btn btn-primary button" onclick="ac7('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 9000</button>
+            <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac7('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 9000</button>
+            </div>
           </div>
         </div>
       </div>
@@ -167,7 +239,16 @@
           <div class="card-body">
             <h5 class="card-title">Metal wedding ring</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac8('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 7000</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac8('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 7000</button>
+            </div>
           </div>
         </div>
       </div>
@@ -179,7 +260,16 @@
           <div class="card-body">
             <h5 class="card-title">Fossil's watches for women <b>(pack)</b></h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac9('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 12500</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac9('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 12500</button>
+            </div>
           </div>
         </div>
       </div>
@@ -190,8 +280,16 @@
           <div class="card-body">
             <h5 class="card-title">Pink colored handbag</h5> 
             <p class="card-text"></p>
-            
-            <button class="btn btn-primary button" onclick="ac10('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 800</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac10('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 800</button>
+            </div>
           </div>
         </div>
       </div>
@@ -204,7 +302,16 @@
           <div class="card-body">
             <h5 class="card-title">Chrome heart necklace pendant</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac11('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 3300</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac11('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 3300</button>
+            </div>
           </div>
         </div>
       </div>
@@ -216,7 +323,16 @@
           <div class="card-body">
             <h5 class="card-title">Princess crown ring</h5>
             <p class="card-text"></p>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+           <div class="card-footer"> 
             <button class="btn btn-primary button" onclick="ac12('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4300</button>
+          </div>
           </div>
         </div>
       </div>
@@ -227,8 +343,16 @@
           <div class="card-body">
             <h5 class="card-title">Omega deville wrist watch </h5> 
             <p class="card-text"></p>
-            
-            <button class="btn btn-primary button" onclick="ac13('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 6100</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+</div>
+            <div class="card-footer">
+               <button class="btn btn-primary button" onclick="ac13('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 6100</button>
+            </div>
           </div>
         </div>
       </div>
@@ -241,7 +365,16 @@
           <div class="card-body">
             <h5 class="card-title">Pink stylish makeup kit</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac14('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5800</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac14('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 5800</button>
+            </div>
           </div>
         </div>
       </div>
@@ -253,7 +386,18 @@
           <div class="card-body">
             <h5 class="card-title">Purple cubic zirconia stone ring</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac15('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 15000</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <div class="card-footer">
+                <button class="btn btn-primary button" onclick="ac15('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 15000</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -264,7 +408,16 @@
           <div class="card-body">
             <h5 class="card-title">Woman sling shoulder bag</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac16('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4800</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac16('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 4800</button>
+            </div>
           </div>
         </div>
       </div>
@@ -276,7 +429,16 @@
           <div class="card-body">
             <h5 class="card-title">Full makeup kits</h5>
             <p class="card-text"></p>
-            <button class="btn btn-primary button" onclick="ac17('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 7600</button>
+             <div class="product-rating">
+            <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star" style="color: orange;"></i>
+  <i class="fas fa-star-half-alt" style="color: orange;"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+</div>
+            <div class="card-footer">
+              <button class="btn btn-primary button" onclick="ac17('Product',1500,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure, doloremque veniam ratione assumenda a.','Images/abstract-futuristic-dark-black-background-with-modern-design-realistic-wallpaper-with-luxurious-flowing-lines-elegant-background-for-posters-websites-brochures-cards-banners-apps-etc-vector.jpg','Spec 1','Spec 2','Spec 3')">Buy Now - PKR 7600</button>
+            </div>
           </div>
         </div>
       </div>

@@ -53,8 +53,8 @@
 
   <script>
     //selected product from localStorage
-    const item = JSON.parse(localStorage.getItem("checklistItem"));
-    const details = document.getElementById("productDetails");
+    var item = JSON.parse(localStorage.getItem("checklistItem"));
+    var details = document.getElementById("productDetails");
 
     if (item) {
       details.innerHTML = `
@@ -79,7 +79,7 @@
     // Handle form submission
     document.getElementById("checklistForm").addEventListener("submit", function(e) {
       e.preventDefault();
-       const currentUser = localStorage.getItem("loggedInUser");
+       var currentUser = localStorage.getItem("loggedInUser");
   if (!currentUser) {
     alert("Please sign up or sign in to place your order.");
     window.location.href = "signup.html"; // redirect to signup

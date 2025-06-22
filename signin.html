@@ -43,7 +43,7 @@
     }
     .container h2 {
       margin-bottom: 20px;
-      color: gray;
+      color: black;
     }
     .container input {
       width: 100%;
@@ -53,10 +53,16 @@
       border-radius: 8px;
       font-size: 16px;
     }
+     .submit{
+        color: white;
+      }
+      .submit:hover{
+        color: gold;
+      }
     .container button {
       width: 100%;
       padding: 12px;
-      background-color: lightblue;
+      background-color: black;
       color: white;
       border: none;
       border-radius: 8px;
@@ -64,22 +70,19 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .container button:hover {
-      background-color: blue;
-    }
     .switch-link {
       margin-top: 15px;
       font-size: 14px;
       color: gray;
     }
     .switch-link a {
-      color: lightblue;
+      color: black;
       text-decoration: none;
       font-weight: bold;
     }
     .switch-link a:hover {
       text-decoration: underline;
-      color: blue;
+      color: gold;
     }
   </style>
 </head>
@@ -89,7 +92,7 @@
     <form id="signinForm">
       <input type="email" id="email" placeholder="Email Address" required>
       <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Sign In</button>
+      <button class="submit" type="submit">Sign In</button>
     </form>
     <div class="switch-link">
       Don't have an account? <a href="signup.html">Sign Up</a>
@@ -100,10 +103,10 @@
     document.getElementById("signinForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const savedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      var savedUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
 
       if (!savedUser || savedUser.email !== email || savedUser.password !== password) {
         alert("Invalid email or password.");

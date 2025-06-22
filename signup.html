@@ -27,7 +27,7 @@
     }
     .container h2 {
       margin-bottom: 20px;
-      color: gray;
+      color: black;
     }
     .container input {
       width: 100%;
@@ -37,10 +37,16 @@
       border-radius: 8px;
       font-size: 16px;
     }
+    .signup{
+      color: white;
+    }
+    .signup:hover{
+      color: gold;
+    }
     .container button {
       width: 100%;
       padding: 12px;
-      background-color: lightblue;
+      background-color: black;
       color: white;
       border: none;
       border-radius: 8px;
@@ -48,33 +54,31 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .container button:hover {
-      background-color: blue;
-    }
     .switch-link {
       margin-top: 15px;
       font-size: 14px;
-      color: gray;
+      color: black;
     }
     .switch-link a {
-      color: lightblue;
+      color: black;
       text-decoration: none;
       font-weight: bold;
     }
     .switch-link a:hover {
       text-decoration: underline;
-      color: blue;
+      color: gold;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1 class="head">Welcome to Madam's Boutique</h1>
     <h2>Create Your Account</h2>
     <form id="signupForm">
       <input type="text" id="name" placeholder="Full Name" required>
       <input type="email" id="email" placeholder="Email Address" required>
       <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Sign Up</button>
+      <button class="signup" type="submit">Sign Up</button>
     </form>
     <div class="switch-link">
       Already have an account? <a href="signin.html">Sign In</a>

@@ -61,7 +61,7 @@
   </div>
 
   <script>
-  const cartItemsDiv = document.getElementById("cartItems");
+  var cartItemsDiv = document.getElementById("cartItems");
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   function renderCart() {
@@ -98,12 +98,12 @@
     renderCart(); // re-render the cart after deletion
   }
 
-  // Initial render
+  // rendering
   renderCart();
 </script>
 <script>
   function moveToChecklist(index) {
-    const item = cart[index];
+    var item = cart[index];
     localStorage.setItem("checklistItem", JSON.stringify(item)); // store selected item
     window.location.href = "checklist.html"; // go to form page
   }
