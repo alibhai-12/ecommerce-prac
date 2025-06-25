@@ -17,7 +17,7 @@
       border-radius: 0 0 20px 20px;
     }
     .contact-card {
-      background: #fff;
+      background: aliceblue;
       border-radius: 15px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       padding: 2rem;
@@ -83,14 +83,29 @@
   <label for="email" class="form-label">Email address</label>
   <input type="email" class="form-control" id="email" placeholder="name@example.com">
 </div>
+<style>
+  .btn {
+    color: white;
+  }
+  .btn:hover{
+    color: gold;
+  }
+  .form-control{
+color: black;
+  }
+  .form-control:hover{
+    color: goldenrod;
+  }
+
+</style>
 <!-- Combined Button for Name + Email -->
-<button type="button" class="btn btn-primary w-100 mb-4" id="checkInfoBtn" style="background-color: gray;">Enter</button>
+<button type="button" class="btn btn-primary w-100 mb-4" id="checkInfoBtn" style="background-color: black">Enter</button>
           <div class="mb-3">
             <label for="message" class="form-label">Your Message</label>
             <textarea class="form-control" id="message" rows="4" placeholder="Write your message..."></textarea>
 
           </div>
-          <button type="button" class="btn btn-dark w-100" id="sendMessageBtn" style="background-color: gray;">Send Message</button>
+          <button type="button" class="btn btn-dark w-100" id="sendMessageBtn" style="background-color: black;">Send Message</button>
 
         </form>
       </div>
